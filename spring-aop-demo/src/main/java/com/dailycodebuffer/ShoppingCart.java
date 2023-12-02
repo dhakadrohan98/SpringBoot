@@ -11,4 +11,8 @@ public class ShoppingCart {
     public void checkout(String status){
         System.out.println("checkOut method is called from ShoppingCart class: "+status);
     }
+
+    public int quantity() {
+        return 2;
+    }
 }
