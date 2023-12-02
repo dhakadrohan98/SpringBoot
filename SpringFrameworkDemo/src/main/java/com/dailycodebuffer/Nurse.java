@@ -1,5 +1,8 @@
 package com.dailycodebuffer;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Nurse implements Staff {
     private String name;
     private int age;
@@ -50,6 +53,6 @@ public class Nurse implements Staff {
 
     @Override
     public void assist() {
-        System.out.println("Nurse is assisting");
+        System.out.println("Nurse is assisting to the doctor.");
     }
 }
