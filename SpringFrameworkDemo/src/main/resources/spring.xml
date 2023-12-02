@@ -10,12 +10,5 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean class="com.dailycodebuffer.Doctor" id="doctor1"></bean>
-
-    <bean class="com.dailycodebuffer.Nurse" name="nurse1">
-        <property name="name" value="Akansha"/>
-        <property name="age" value="24"/>
-        <property name="address" value="Ujjain"/>
-    </bean>
-
+<!--    <context:component-scan base-package="com.dailycodebuffer"></context:component-scan>-->
 </beans>
