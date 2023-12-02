@@ -9,12 +9,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 //        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        ApplicationContext context = new AnnotationConfigApplicationContext(Doctor.class);
+        AnnotationConfigApplicationContext  context = new AnnotationConfigApplicationContext(Doctor.class);
         System.out.println("Before creating a Bean");
         Doctor doctor = context.getBean(Doctor.class);
         System.out.println("After creating a Bean");
         doctor.setQualification("MBBS");
         System.out.println(doctor.getQualification());
+        context.close();
 
 //        Doctor doctor1 = context.getBean(Doctor.class);
 //        System.out.println(doctor1.getQualification());
