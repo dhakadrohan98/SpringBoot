@@ -25,8 +25,8 @@ public class LoggingAspect {
 
     }
 
-    @AfterReturning(pointcut = "afterReturningPointCut()", returning = "retVal")
-    public void afterReturningAdvice(String retVal) {
-        System.out.println("After returning: "+ retVal);
+    @AfterReturning(pointcut = "afterReturningPointCut()",returning = "returnValue")
+    public void afterReturning(Object returnValue) {
+        System.out.println("After returning value: " + returnValue);
     }
 }
