@@ -1,9 +1,7 @@
 package com.dailycodebuffer;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -11,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class LoggingAspect {
 
     @Before("execution(* com.dailycodebuffer.ShoppingCart.checkout(..))")
-    public void beforeLogger(JoinPoint joinpoint) {
+        public void beforeLogger(JoinPoint joinpoint) {
         System.out.println(joinpoint.getSignature());
         String arg = joinpoint.getArgs()[0].toString();
         System.out.println("Before loggers with Argument: "+arg);
@@ -20,5 +18,15 @@ public class LoggingAspect {
     @After("execution(* *.*.*.checkout(..))")
     public void afterLogger() {
         System.out.println("After loggers");
+    }
+
+    @Pointcut("execution(* com.dailycodebuffer.ShoppingCart.quantity(..))")
+    public void afterReturningPointCut() {
+
+    }
+
+    @AfterReturning(pointcut = "afterReturningPointCut()",returning = "returnValue")
+    public void afterReturning(Object returnValue) {
+        System.out.println("After returning value: " + returnValue);
     }
 }
