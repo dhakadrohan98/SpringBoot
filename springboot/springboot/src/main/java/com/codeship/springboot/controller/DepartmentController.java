@@ -2,6 +2,8 @@ package com.codeship.springboot.controller;
 
 import com.codeship.springboot.entity.Department;
 import com.codeship.springboot.service.DepartmentService;
+import jakarta.validation.Valid;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +15,7 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
     @PostMapping("/create/department")
-    public Department saveDepartment(@RequestBody Department department) {
+    public Department saveDepartment(@Valid @RequestBody Department department) {
         return departmentService.saveDepartment(department);
     }
 
@@ -24,7 +26,11 @@ public class DepartmentController {
 
     @GetMapping("/departments/{id}")
     public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
-        return departmentService.fetchDepartmentById(departmentId);
+        try {
+            return departmentService.fetchDepartmentById(departmentId);
+        } catch (NotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @DeleteMapping("/departments/{id}")
@@ -36,6 +42,11 @@ public class DepartmentController {
     @PutMapping("/departments/{id}")
     public Department updateDepartment(@PathVariable("id") Long departmentId,@RequestBody Department department) {
         return departmentService.updateDepartment(departmentId,department);
+    }
+
+    @GetMapping("/departments/name/{name}")
+    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
+        return departmentService.fetchDepartmentByName(departmentName);
     }
 
 }
