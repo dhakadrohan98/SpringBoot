@@ -1,10 +1,14 @@
 package com.codeship.springboot.entity;
 
+import com.codeship.springboot.controller.DepartmentController;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.Length;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Entity
 public class Department {
@@ -12,6 +16,7 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
     @NotBlank(message = "Please Add Department Name")
+    @Length(max=5, min=3)
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
@@ -22,6 +27,7 @@ public class Department {
         this.departmentAddress = departmentAddress;
         this.departmentCode = departmentCode;
     }
+
 
     public Department() {
         super();
