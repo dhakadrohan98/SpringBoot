@@ -1,6 +1,7 @@
 package com.codeship.springboot.controller;
 
 import com.codeship.springboot.entity.Department;
+import com.codeship.springboot.error.DepartmentNotFoundException;
 import com.codeship.springboot.service.DepartmentService;
 import jakarta.validation.Valid;
 import javassist.NotFoundException;
@@ -17,13 +18,13 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
+    private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
+
     @PostMapping("/create/department")
     public Department saveDepartment(@Valid @RequestBody Department department) {
         LOGGER.info("Inside saveDepartment() method of Department Controller");
         return departmentService.saveDepartment(department);
     }
-
-    private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
 
     @GetMapping("/departments")
     public List<Department> fetchDepartmentList() {
@@ -32,11 +33,11 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         try {
             LOGGER.info("inside fetchDepartmentById() of Department Controller");
             return departmentService.fetchDepartmentById(departmentId);
-        } catch (NotFoundException e) {
+        } catch (DepartmentNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
