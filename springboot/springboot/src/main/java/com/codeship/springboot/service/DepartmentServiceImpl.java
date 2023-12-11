@@ -1,6 +1,7 @@
 package com.codeship.springboot.service;
 
 import com.codeship.springboot.entity.Department;
+import com.codeship.springboot.error.DepartmentNotFoundException;
 import com.codeship.springboot.repository.DepartmentRepository;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +29,14 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public Department fetchDepartmentById(Long departmentId) throws NotFoundException {
-        Optional<Department> departmentOptional = departmentRepository.findById(departmentId);
-        if (departmentOptional.isPresent()) {
-            return departmentOptional.get();
+    public Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException {
+        Optional<Department> department = departmentRepository.findById(departmentId);
+        if (department.isPresent()) {
+            return department.get();
         }
         else {
             // Handle the case when the department with the given ID is not found
-            throw new NotFoundException("Department not found for ID: " + departmentId);
+            throw new DepartmentNotFoundException("Department not found for ID: " + departmentId);
         }
     }
 
