@@ -46,13 +46,13 @@ public class DepartmentController {
     }
 
     @PutMapping("/departments/{id}")
-    public Department updateDepartment(@PathVariable("id") Long departmentId,@RequestBody Department department) {
+        public Department updateDepartment(@PathVariable("id") Long departmentId,@RequestBody Department department) {
         LOGGER.info("inside updateDepartment() of Department Controller");
         return departmentService.updateDepartment(departmentId,department);
     }
 
     @GetMapping("/departments/name/{name}")
-    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
+        public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
         LOGGER.info("inside fetchDepartmentByName() of Department Controller");
         return departmentService.fetchDepartmentByName(departmentName);
     }
