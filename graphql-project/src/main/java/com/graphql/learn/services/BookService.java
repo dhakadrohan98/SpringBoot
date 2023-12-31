@@ -11,4 +11,6 @@ public interface BookService {
     public List<Book> getAll();
 
     public Book get(int bookId);
+
+    public Book getByAuthor(String bookAuhtor);
 }

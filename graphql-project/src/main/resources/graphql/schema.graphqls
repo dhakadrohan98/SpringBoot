@@ -5,6 +5,7 @@ type Mutation {
 type Query {
     allBooks:[Book]
     getBook(bookId:Int):Book
+    getAuthor(bookAuthor:String):Book
 }
 
 type Book {
@@ -12,8 +13,8 @@ type Book {
     title:String
     desc:String
     author:String
-    price:String
-    pages:String
+    price:Float
+    pages:Int
 }
 
 input BookInput {

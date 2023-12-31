@@ -44,4 +44,9 @@ public class BookController {
     public Book get(@Argument int bookId) {
         return this.bookService.get(bookId);
     }
+
+    @QueryMapping("getAuthor")
+    public Book getByAuhtor(@Argument String bookAuhtor) {
+        return this.bookService.getByAuthor(bookAuhtor);
+    }
 }
