@@ -1,8 +1,8 @@
 package com.rohan.restapis.controller;
 
-import com.rohan.restapis.entities.AllOrderDetails;
 import com.rohan.restapis.entities.OrderHeaderNew;
 import com.rohan.restapis.entities.Person;
+import com.rohan.restapis.pojo.CustomObject;
 import com.rohan.restapis.services.AllOrderDetailsService;
 import com.rohan.restapis.services.OrderHeaderService;
 import com.rohan.restapis.services.PersonService;
@@ -37,7 +37,7 @@ public class OrderController {
     }
 
     @GetMapping("get/allorder")
-    public AllOrderDetails getAllOrders() {
+    public CustomObject getAllOrders() {
         return this.allOrderDetailsService.getAllOrders();
     }
 }
