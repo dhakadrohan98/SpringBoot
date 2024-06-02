@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a6da125-6f86-49b5-b6d4-61a651f360a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/pojo/CustomObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/pojo/CustomerDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/pojo/ItemDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/pojo/OrderParts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/pojo/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/repositories/AllOrderDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/repositories/OrderHeaderNewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/repositories/OrderHeaderNewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/services/AllOrderDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/services/AllOrderDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/services/AllOrderDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RestApis/RestApis/src/main/java/com/rohan/restapis/services/AllOrderDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2hEIAk5eZe9yx2HWBgsXA4VRGmz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "rohan",
+    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/SpringFrameworkDemo"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SpringFrameworkDemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SpringFrameworkDemo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a6da125-6f86-49b5-b6d4-61a651f360a8" name="Changes" comment="" />
+      <created>1717152671426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717152671426</updated>
+    </task>
+    <servers />
+  </component>
+</project>
